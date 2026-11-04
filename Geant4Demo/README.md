@@ -4,7 +4,7 @@
 **Instituição:** Instituto Militar de Engenharia (IME) — PPGEN  
 **Elaboração:** Diogenes Kreusch Filho
 
-[← Página principal do repositório](../README.md) · [Roteiro da atividade](./ROTEIRO_ALUNOS.md) · [Guia de instalação](../Guia_Instalacao_Geant4_WSL_Alunos_IME_PPGEN_Revisado.pdf)
+[← Página principal do repositório](../README.md) · [Roteiro da atividade](./ROTEIRO_ALUNOS.md) · [Guia de instalação](../Guia_Instalacao_Geant4_WSL_Alunos_IME_PPGEN.pdf)
 
 ## 1. Objetivo da demonstração
 
