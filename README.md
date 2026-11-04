@@ -27,11 +27,11 @@ O exercício acompanha fótons gama que partem de uma fonte pontual, atravessam 
 
 | Material | Conteúdo |
 | --- | --- |
-| [Guia de instalação do Geant4 no Windows/WSL](docs/Guia_Instalacao_Geant4_WSL.pdf) | Instalação do WSL 2, Ubuntu 24.04 LTS e Geant4 diretamente do código-fonte, sem Conda. |
-| [Roteiro da atividade prática](ROTEIRO_ALUNOS.md) | Sequência de exercícios e questões para interpretação dos resultados. |
-| [Código-fonte C++](src/) e [cabeçalhos](include/) | Geometria, fonte, ações do usuário e coleta de dados. |
-| [Macros da simulação](run_duas_energias.mac) | Parâmetros de execução, energias e número de eventos. |
-| [Script de análise](tools/analisar_resultados.py) | Organização dos resultados e geração de gráficos. |
+| [Guia de instalação do Geant4 no Windows/WSL](Guia_Instalacao_Geant4_WSL.pdf) | Instalação do WSL 2, Ubuntu 24.04 LTS e Geant4 diretamente do código-fonte, sem Conda. |
+| [Roteiro da atividade prática](Geant4Demo/ROTEIRO_ALUNOS.md) | Sequência de exercícios e questões para interpretação dos resultados. |
+| [Código-fonte C++](Geant4Demo/src/) e [cabeçalhos](Geant4Demo/include/) | Geometria, fonte, ações do usuário e coleta de dados. |
+| [Macros da simulação](Geant4Demo/run_duas_energias.mac) | Parâmetros de execução, energias e número de eventos. |
+| [Script de análise](Geant4Demo/tools/analisar_resultados.py) | Organização dos resultados e geração de gráficos. |
 
 ## Problema físico
 
