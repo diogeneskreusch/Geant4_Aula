@@ -167,17 +167,18 @@ O programa utiliza `vis.mac` e executa dez eventos para exibição das trajetór
 
 **Fração de eventos com chegada de fótons:**
 
-\[
-\hat f = \frac{N_{\text{eventos com chegada de }\gamma}}{N_{\text{eventos}}}
-\]
+```math
+\hat{f} = \frac{N_{\text{eventos com chegada de }\gamma}}{N_{\text{eventos}}}
+```
 
 Cada evento conta no máximo uma vez, mesmo que mais de um fóton entre no detector. Fótons espalhados podem ser incluídos. A fração **não equivale necessariamente à transmissão não colidida** \(e^{-\mu x}\).
 
 **Energia média depositada por evento:**
 
-\[
+```math
 \overline{E}_{\mathrm{dep}} = \frac{1}{N}\sum_{i=1}^{N} E_{\mathrm{dep},i}
-\]
+```
+
 
 A energia depositada é acumulada pelos passos de todas as partículas no silício. Eventos sem deposição são incluídos com valor zero. **Entrada de um fóton no detector não significa necessariamente deposição de energia**.
 
