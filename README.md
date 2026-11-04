@@ -1,7 +1,7 @@
 <div align="center">
-  <img src="assets/ime.png" alt="Brasão do Instituto Militar de Engenharia (IME)" height="110">
+  <img src="ime.png" alt="Brasão do Instituto Militar de Engenharia (IME)" height="110">
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="assets/ppgen.png" alt="Logotipo do Programa de Pós-Graduação em Engenharia Nuclear (PPGEN)" height="110">
+  <img src="ppgen.png" alt="Logotipo do Programa de Pós-Graduação em Engenharia Nuclear (PPGEN)" height="110">
 </div>
 
 <div align="center">
