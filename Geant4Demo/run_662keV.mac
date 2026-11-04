@@ -1,0 +1,11 @@
+# Um run com 662 keV e 20.000 eventos.
+/run/verbose 0
+/event/verbose 0
+/tracking/verbose 0
+/run/initialize
+/gun/particle gamma
+/gun/energy 662 keV
+/gun/position 0 0 -10 cm
+/gun/direction 0 0 1
+/run/printProgress 5000
+/run/beamOn 20000

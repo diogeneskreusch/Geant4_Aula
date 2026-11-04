@@ -1,0 +1,21 @@
+# Execute sem argumentos: ./build/Geant4Demo
+# Necessita instalacao Geant4 com driver de visualizacao.
+/control/verbose 1
+/run/verbose 1
+/event/verbose 0
+/tracking/verbose 0
+/run/initialize
+
+/vis/open OGL
+/vis/drawVolume
+/vis/viewer/set/viewpointThetaPhi 65 35 deg
+/vis/viewer/zoom 1.4
+/vis/scene/add/trajectories smooth
+/vis/scene/endOfEventAction accumulate 10
+/vis/viewer/set/autoRefresh true
+
+/gun/particle gamma
+/gun/energy 662 keV
+/gun/position 0 0 -10 cm
+/gun/direction 0 0 1
+/run/beamOn 10

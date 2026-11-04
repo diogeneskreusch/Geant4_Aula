@@ -1,0 +1,13 @@
+# Configuracao de referencia para demonstracao.
+# Geometria inicial: Pb com espessura 1.0 cm.
+/control/verbose 1
+/run/verbose 0
+/event/verbose 0
+/tracking/verbose 0
+/run/initialize
+/gun/particle gamma
+/gun/energy 662 keV
+/gun/position 0 0 -10 cm
+/gun/direction 0 0 1
+/run/printProgress 5000
+/run/beamOn 20000

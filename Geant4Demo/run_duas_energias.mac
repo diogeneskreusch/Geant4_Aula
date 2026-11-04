@@ -1,0 +1,17 @@
+# Executa dois runs na mesma geometria, sem recompilar.
+/run/verbose 0
+/event/verbose 0
+/tracking/verbose 0
+/run/initialize
+/gun/particle gamma
+/gun/position 0 0 -10 cm
+/gun/direction 0 0 1
+/run/printProgress 5000
+
+# Run 0: 662 keV
+/gun/energy 662 keV
+/run/beamOn 20000
+
+# Run 1: 1 MeV
+/gun/energy 1 MeV
+/run/beamOn 20000
