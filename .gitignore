@@ -1,0 +1,32 @@
+# Compilação
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+# Executáveis e bibliotecas
+*.o
+*.so
+*.a
+*.exe
+
+# Resultados das simulações
+resultados.csv
+resultados_*.csv
+figuras/
+
+# Arquivos temporários do Python
+__pycache__/
+*.pyc
+
+# Arquivos auxiliares LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# Arquivos de editor
+.vscode/
+.idea/
