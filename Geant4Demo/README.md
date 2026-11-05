@@ -78,7 +78,7 @@ Para a instalação completa, consulte o [guia da disciplina](../Guia_Instalacao
 Se ainda não clonou o repositório, copie sua URL HTTPS na opção **Code** do GitHub e execute no terminal Ubuntu, substituindo o campo indicado:
 
 ```bash
-git clone URL_HTTPS_DO_REPOSITORIO repositorio-geant4
+git clone https://github.com/diogeneskreusch/Geant4_Aula repositorio-geant4
 cd repositorio-geant4/Geant4Demo
 ```
 
@@ -122,95 +122,7 @@ Esse teste deve mostrar um resumo numérico no terminal e criar o arquivo `resul
 mv resultados.csv resultados_teste.csv
 ```
 
-> **Validação:** o projeto foi preparado para fins didáticos; a compilação e a execução real ainda devem ser verificadas na instalação Geant4 utilizada na disciplina.
-
-## 7. Campanha com quatro configurações
-
-| Configuração | Energia | Pb | Eventos |
-| --- | ---: | ---: | ---: |
-| A | 662 keV | 1 cm | 20.000 |
-| B | 1 MeV | 1 cm | 20.000 |
-| C | 662 keV | 3 cm | 20.000 |
-| D | 1 MeV | 3 cm | 20.000 |
-
-**Parte A — geometria inicial (1 cm):**
-
-```bash
-./build/Geant4Demo run_duas_energias.mac
-```
-
-**Parte B — geometria modificada (3 cm):**
-
-1. Abra `src/DetectorConstruction.cc`.
-2. Encontre `fLeadThickness = 1.0 * cm;`.
-3. Substitua por `fLeadThickness = 3.0 * cm;` e salve o arquivo.
-4. Recompile **a aplicação**, sem recompilar o Geant4, e execute:
-
-```bash
-cmake --build build --parallel 2
-./build/Geant4Demo run_duas_energias.mac
-```
-
-O arquivo `resultados.csv` é **acumulativo**. Se já houver execuções anteriores, renomeie-o antes de iniciar uma nova campanha para evitar misturar resultados.
-
-## 8. Visualização da geometria e das trajetórias
-
-Com Qt/OpenGL habilitado:
-
-```bash
-./build/Geant4Demo
-```
-
-O programa utiliza `vis.mac` e executa dez eventos para exibição das trajetórias. Se a visualização não estiver disponível, utilize os arquivos `.mac` em **modo lote**; o estudo numérico não depende da interface gráfica.
-
-## 9. Significado dos resultados
-
-**Fração de eventos com chegada de fótons:**
-
-```math
-\hat{f} = \frac{N_{\text{eventos com chegada de }\gamma}}{N_{\text{eventos}}}
-```
-
-Cada evento conta no máximo uma vez, mesmo que mais de um fóton entre no detector. Fótons espalhados podem ser incluídos. A fração **não equivale necessariamente à transmissão não colidida** \(e^{-\mu x}\).
-
-**Energia média depositada por evento:**
-
-```math
-\overline{E}_{\mathrm{dep}} = \frac{1}{N}\sum_{i=1}^{N} E_{\mathrm{dep},i}
-```
-
-
-A energia depositada é acumulada pelos passos de todas as partículas no silício. Eventos sem deposição são incluídos com valor zero. **Entrada de um fóton no detector não significa necessariamente deposição de energia**.
-
-O programa apresenta, para ambas as grandezas, estimativas de incerteza estatística de **1 desvio-padrão (1σ)**.
-
-## 10. Organizar dados e gerar gráficos
-
-Para imprimir a tabela de resultados:
-
-```bash
-python3 tools/analisar_resultados.py resultados.csv
-```
-
-Para gerar também os gráficos (requer Matplotlib):
-
-```bash
-sudo apt install -y python3-matplotlib
-python3 tools/analisar_resultados.py resultados.csv --output figuras
-```
-
-Os arquivos gerados serão `figuras/fracao_chegada.png` e `figuras/energia_depositada.png`. Se existirem configurações repetidas no CSV, o script utiliza a **última ocorrência de cada par energia–espessura**.
-
-## 11. Roteiro da atividade e problemas frequentes
-
-Consulte o [roteiro dos alunos](./ROTEIRO_ALUNOS.md) para as questões e entregas propostas.
-
-- **`Geant4Config.cmake` não encontrado:** confira a instalação e o valor de `CMAKE_PREFIX_PATH`.
-- **Macro não encontrada:** execute os comandos na pasta `Geant4Demo/` ou entre em `build/` e rode `./Geant4Demo nome.mac`.
-- **Erro de interface gráfica:** reconfigure com `-DDEMO_WITH_VIS=OFF` e compile novamente.
-- **Erro SSL ao clonar:** consulte a seção de certificados HTTPS no guia de instalação; não desative a verificação de certificados do Git.
-
-## 12. Referências
+## 7. Referências
 
 - [Geant4 — documentação oficial](https://geant4.web.cern.ch/documentation/)
 - [Geant4 — exemplos básicos](https://github.com/Geant4/geant4/tree/master/examples/basic)
