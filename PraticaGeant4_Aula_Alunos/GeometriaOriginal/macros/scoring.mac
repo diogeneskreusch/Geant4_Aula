@@ -1,0 +1,8 @@
+# Scoring PREDEFINIDO pelo Geant4, sem SteppingAction/EventAction.
+# Exige /run/initialize antes deste arquivo.
+# SiLV = nome do volume logico do detector (no codigo C++).
+/score/create/realWorldLogVol SiLV
+/score/quantity/energyDeposit Edep MeV
+/score/quantity/cellFlux GammaFlux
+/score/filter/particle SomenteGamma gamma
+/score/close

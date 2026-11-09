@@ -1,0 +1,13 @@
+# Modo visual obrigatorio: requer instalacao Geant4 com suporte Qt e WSLg funcional.
+/run/initialize
+/vis/open OGL
+/vis/drawVolume
+/vis/viewer/set/viewpointThetaPhi 65 20
+/vis/viewer/set/style wireframe
+/vis/scene/add/trajectories regular
+/vis/scene/endOfEventAction accumulate
+/vis/viewer/set/autoRefresh true
+/gun/particle gamma
+/gun/energy 1332 keV
+/gun/position 0 0 -12 cm
+/gun/direction 0 0 1
