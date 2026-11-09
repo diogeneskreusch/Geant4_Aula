@@ -1,8 +1,13 @@
-# Scoring PREDEFINIDO pelo Geant4, sem SteppingAction/EventAction.
-# Exige /run/initialize antes deste arquivo.
-# SiLV = nome do volume logico do detector (no codigo C++).
+# Energia depositada no detector de silicio
 /score/create/realWorldLogVol SiLV
 /score/quantity/energyDeposit Edep MeV
-/score/quantity/cellFlux GammaFlux
+/score/close
+
+# Fluencia de fotons no detector
+/score/create/boxMesh DetectorFluxMesh
+/score/mesh/boxSize 3 3 0.05 cm
+/score/mesh/nBin 1 1 1
+/score/mesh/translate/xyz 0 0 10 cm
+/score/quantity/cellFlux GammaFlux percm2
 /score/filter/particle SomenteGamma gamma
 /score/close
