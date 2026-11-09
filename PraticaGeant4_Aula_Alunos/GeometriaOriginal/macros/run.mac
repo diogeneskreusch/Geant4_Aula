@@ -10,4 +10,4 @@
 /gun/direction 0 0 1
 /run/beamOn 20000
 /score/dumpQuantityToFile SiLV Edep resultados/energia_edep.csv
-/score/dumpQuantityToFile SiLV GammaFlux resultados/energia_fluxo.csv
+/score/dumpQuantityToFile DetectorFluxMesh GammaFlux resultados/energia_fluxo.csv
