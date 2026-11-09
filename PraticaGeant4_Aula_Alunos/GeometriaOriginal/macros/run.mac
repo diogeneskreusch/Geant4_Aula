@@ -4,10 +4,6 @@
 /tracking/verbose 0
 /run/initialize
 /control/execute macros/scoring.mac
-/gun/particle gamma
-/gun/energy 1.332 MeV
-/gun/position 0 0 -12 cm
-/gun/direction 0 0 1
 /run/beamOn 20000
 /score/dumpQuantityToFile SiLV Edep resultados/energia_edep.csv
 /score/dumpQuantityToFile DetectorFluxMesh GammaFlux resultados/energia_fluxo.csv
