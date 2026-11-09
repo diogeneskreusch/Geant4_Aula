@@ -38,17 +38,16 @@ O CMake exige Qt; não há opção de desativar o modo visual.
 
 Na **raiz da aplicação** que deseja compilar (não na raiz do pacote):
 
-```bash
-source ~/Geant4/geant4-install/bin/geant4.sh
-cmake -S . -B build -DCMAKE_PREFIX_PATH="$HOME/Geant4/geant4-install"
-cmake --build build --parallel 2
+```
+cmake ..
+make -j$(nproc)
 ```
 
 O caminho usado em `source` e `CMAKE_PREFIX_PATH` deve corresponder à instalação real do Geant4 no computador.
 
 Para executar na **pasta da aplicação**:
 
-```bash
+```
 ./build/PraticaGeant4                  # Modo visual interativo
 ./build/PraticaGeant4 macros/teste.mac # Teste batch
 ./build/PraticaGeant4 macros/run.mac   # Simulação batch
@@ -64,13 +63,13 @@ Cada geometria deve guardar os próprios arquivos `*_edep.csv` e `*_fluxo.csv` e
 
 Após concluir as execuções, o comando abaixo pode ser utilizado **de qualquer diretório**, pois o Python localiza as duas geometrias com base na posição do próprio arquivo:
 
-```bash
+```
 python3 tools/comparar_scores_geant4.py
 ```
 
 O exemplo acima pressupõe que o terminal está na pasta principal do pacote. Para informar outro número de eventos por configuração:
 
-```bash
+```
 python3 tools/comparar_scores_geant4.py --eventos 20000
 ```
 
